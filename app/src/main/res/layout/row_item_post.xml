@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="12dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,32 +16,32 @@
             android:id="@+id/img_profile"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="12dp"
-            tools:src="@tools:sample/avatars"/>
+            android:layout_marginTop="20dp"
+            tools:src="@tools:sample/avatars" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/app_name"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="12dp"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
                 android:textSize="24sp"
-                android:textColor="@color/black"/>
+                android:textStyle="bold"
+                tools:text="@string/app_name" />
 
             <TextView
                 android:id="@+id/tv_profile_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/app_name"
-                android:layout_marginStart="12dp"/>
+                android:layout_marginStart="12dp"
+                tools:text="@string/app_name" />
         </LinearLayout>
 
     </LinearLayout>
@@ -51,157 +51,157 @@
         android:layout_height="match_parent"
         android:layout_marginTop="84dp">
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/cv_post"
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="12dp"
             app:cardCornerRadius="20dp"
-            android:layout_margin="12dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/iv_post_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:src="@tools:sample/backgrounds/scenic"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic" />
 
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
         <ToggleButton
             android:id="@+id/ib_like"
+            style="@style/toggleButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:scaleType="centerCrop"
-            style="@style/toggleButton"
-            app:layout_constraintTop_toBottomOf="@+id/cv_post"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="12dp"
-            android:background="@drawable/ic_toggle_bg" />
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_toggle_bg"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_post" />
 
         <ImageButton
             android:id="@+id/ib_comment"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_chat_bubble_outline_24"
-            app:layout_constraintTop_toBottomOf="@id/cv_post"
-            app:layout_constraintStart_toEndOf="@+id/ib_like"
-            android:layout_marginTop="8dp"
-            android:scaleType="centerCrop"
             android:layout_marginStart="12dp"
-            android:background="@android:color/transparent" />
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_chat_bubble_outline_24"
+            app:layout_constraintStart_toEndOf="@+id/ib_like"
+            app:layout_constraintTop_toBottomOf="@id/cv_post" />
 
         <ImageButton
             android:id="@+id/ib_save"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_bookmark_border_24"
-            app:layout_constraintTop_toBottomOf="@id/cv_post"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
-            android:scaleType="centerCrop"
             android:layout_marginEnd="12dp"
-            android:background="@android:color/transparent" />
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_bookmark_border_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_post" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Liked by"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="Liked by"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like" />
 
         <TextView
             android:id="@+id/txt_liked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Liked by"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="Liked by"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like" />
 
         <TextView
             android:id="@+id/txt_user_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="blabla"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toEndOf="@id/txt_liked"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/txt_liked"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like"
+            tools:text="blabla" />
 
         <TextView
             android:id="@+id/txt_and"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="and"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toEndOf="@id/txt_user_like"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="and"
+            app:layout_constraintStart_toEndOf="@id/txt_user_like"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like" />
 
         <TextView
             android:id="@+id/txt_liked_others"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="432"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toEndOf="@id/txt_and"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/txt_and"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like"
+            tools:text="432" />
 
         <TextView
             android:id="@+id/txt_others"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Others"
-            app:layout_constraintTop_toBottomOf="@+id/ib_like"
-            app:layout_constraintStart_toEndOf="@id/txt_liked_others"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="Others"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/txt_liked_others"
+            app:layout_constraintTop_toBottomOf="@+id/ib_like" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="435dp"
         android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
         android:padding="12dp">
 
         <TextView
             android:id="@+id/tv_caption_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@tools:sample/last_names"
-            android:textStyle="bold"
             android:layout_marginStart="4dp"
+            android:textColor="@color/black"
             android:textSize="16sp"
-            android:textColor="@color/black" />
+            android:textStyle="bold"
+            tools:text="@tools:sample/last_names" />
 
         <TextView
             android:id="@+id/tv_caption_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="lorem ipsum dolor sit amet"
-            android:textStyle="normal"
-            android:textSize="14sp"
-            android:textColor="@color/black"
             android:layout_marginStart="6dp"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            tools:text="lorem ipsum dolor sit amet" />
 
 
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>
